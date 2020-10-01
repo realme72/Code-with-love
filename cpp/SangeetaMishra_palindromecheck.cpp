@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// using stl it can be done in fewer lines
+
+bool CheckForPalindrome(string &s){
+    string r = s;
+    reverse(r.begin(), r.end());
+    return s == r ? 1 : 0;
+} 
+
 int main(){
     string str;
     cin >> str;
