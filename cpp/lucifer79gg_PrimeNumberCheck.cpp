@@ -1,6 +1,23 @@
 #include <iostream>
 using namespace std;
 
+// using sieve of eratosthenes can save a lot of times.
+
+bool prime[1000]
+
+void sieveOfEratosthenes(bool prime[]) {
+    memset(prime, true, sizeof(prime));
+    prime[0] = false;
+    prime[1] = false;
+    for(int i = 2; i*i <n; ++i){
+        if(prime[i]) {
+            for(int j = i*i ; j<=n; j += i) prime[j] = false;
+        }
+    }
+}
+
+// the complexity of this classic sieve of eratosthenes is O(nlog(log n)).
+
 int main() {
     int i, n;
     bool isPrime = true;
