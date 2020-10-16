@@ -24,6 +24,15 @@ int binarySearchUsingStl(int array[], int size, int element) {
     return binary_search(array, array + size, element);
 }
 
+int binarySearchUsingStl(int array[], int size, int element) {
+    // if element exist then function will return 1
+    if( binary_search(array, array + size, element) ) {
+        return 1; 
+    }
+    // if element doesn't exist then answer will be 0
+    return 0;
+}
+
 int main()
 {
     int element,array[]={1,23,28,34,37,56,78,83,89,90};
